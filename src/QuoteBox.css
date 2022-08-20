@@ -1,0 +1,17 @@
+#text{
+  font-size: larger;
+  font-weight: 600;
+}
+#author{
+  margin-right: -40vw;
+}
+#tweet-quote{
+  margin-left: 5vw;
+}
+#tumblr-quote
+{
+  margin-left: 10vw;
+}
+#new-quote{
+  margin-right: 5vw;
+}
