@@ -18,8 +18,7 @@ function QuoteBox({ quote, setfetchNewQuote, fetchNewQuote }) {
         className="position-absolute bottom-0 start-0 "
         target="_blank"
         rel="noreferrer"
-        href={`https://twitter.com/intent/tweet?text=${quote.quote} - ${quote.author}`}
-      >
+        href={`https://twitter.com/intent/tweet?text=${quote.quote} - ${quote.author}`}>
         <i className="bi bi-twitter" style={{ fontSize: 30 }} />
       </a>
       <a
@@ -27,16 +26,16 @@ function QuoteBox({ quote, setfetchNewQuote, fetchNewQuote }) {
         className="position-absolute bottom-0 start-0"
         target="_blank"
         rel="noreferrer"
-        href="https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quote.quote}&content=${quote.quote}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button"
-      >
+        href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quote.quote}&content=${quote.quote}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`}>
         <i className="bi bi-share" style={{ fontSize: 30 }} />
       </a>
       <div
         id="new-quote"
         href="#"
+        role="presentation"
         className="btn btn-primary position-absolute bottom-0 end-0 "
-        onClick={(e) => (e.preventDefault(), setfetchNewQuote(!fetchNewQuote))}
-      >
+        onClick={() => setfetchNewQuote(!fetchNewQuote)}
+        onKeyDown={() => setfetchNewQuote(!fetchNewQuote)}>
         New Quote
       </div>
     </div>
